@@ -17,9 +17,10 @@
     }
 
     body{
+        display: flex;
+        flex-direction: column;
         background-color: var(--darkerblue);
         color: var(--snowhite);
-        overflow: hidden;
     }
 
     html{
@@ -47,12 +48,13 @@
 
 /*- HEADER (INICIO) -*/
     header{
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         padding: 1%;
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
     }
     #logo{
         width: 100px;
@@ -122,14 +124,15 @@
 /*- MAIN (INICIO) -*/
     main{
         width: 100%;
-        height: auto;
+        height: 85vh;
         display: flex;
         flex-direction: row;
+        box-sizing: border-box;
     }
     aside{
         width: 30%;
-        height: 100%;
-        top: 0;
+        height: 85vh;
+        bottom: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -177,6 +180,7 @@
     .socialIcon{
         width: 75px;
         filter: drop-shadow(4px 6px 9px black) grayscale(1);
+        transition: all .15s ease-in-out;
     }
     footer{
         width: 60%;
@@ -192,10 +196,10 @@
     article{
         position: fixed;
         width: 70%;
-        height: 100%;
+        height: 82vh;
         display: flex;
         flex-direction: column;
-        margin-left: 30%;
+        right: 10px;
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(5px);
         border-radius: 10px;
@@ -213,6 +217,18 @@
     #about-content, #experience-content, #projects-content{
         margin: 2%;
     }
+    #projects-content a {
+        text-decoration: none;
+        margin: 5px;
+    }
+    #projects-content a h4{
+        color: white;
+        transition: all .25s ease-in-out;
+    }
+    #projects-content a h4:hover{
+        color: lightgrey;
+        margin-left: 10px;
+    }
     p{
         font-family: thinFont;
         font-size: 1.1em;
@@ -222,8 +238,3 @@
         scroll-margin-top: 30px;
     }
 /*- MAIN (FIN) -*/
-
-
-/*- FOOTER (INICIO) -*/
-
-/*- FOOTER (FIN) -*/
