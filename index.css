@@ -219,7 +219,7 @@
     }
     #projects-content a {
         text-decoration: none;
-        margin: 5px;
+        margin: 0px 5px 5px 5px;
     }
     #projects-content a h4{
         color: white;
