@@ -21,6 +21,7 @@
         flex-direction: column;
         background-color: var(--darkerblue);
         color: var(--snowhite);
+        box-sizing: border-box;
     }
 
     html{
@@ -238,3 +239,23 @@
         scroll-margin-top: 30px;
     }
 /*- MAIN (FIN) -*/
+
+/*- MEDIA QUERIES (INICIO)-*/
+    @media (max-width: 480px){
+        header {
+            width: 100%;
+        }
+        nav {
+            width: 60%;
+        }
+        nav a {
+            width: 33%;
+        }
+    }
+    @media (min-width: 481px) and (max-width: 768px){
+
+    }
+    @media (min-width: 769px) {
+
+    }
+/*- MEDIA QUERIES (FIN)-*/
