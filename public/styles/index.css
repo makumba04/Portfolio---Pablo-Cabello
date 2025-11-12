@@ -8,12 +8,12 @@
 
     @font-face { /*- NORMAL -*/
         font-family: thinFont;
-        src: url(public/font/Inter-Thin.ttf);
+        src: url(../assets/font/Inter-Thin.ttf);
     }
 
     @font-face { /*- NEGRITA -*/
         font-family: boldFont;
-        src: url(public/font/Inter-Bold.ttf);
+        src: url(../assets/font/Inter-Bold.ttf);
     }
 
     body{
