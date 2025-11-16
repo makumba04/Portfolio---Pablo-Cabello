@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <script src="public/js/index.js"></script>
+    <script src="public/js/droplist.js"></script>
     <link rel="stylesheet" type="text/css" href="public/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="public/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/hamburgers.css">
     <link rel="icon" type="image/x-icon" href="public/assets/images/favicon.ico">
     <meta name="author" content="Pablo Cabello">
     <meta name="description" content="Un pequeño resumen de mis andaduras como desarrollador web">
@@ -24,9 +26,15 @@
                 <a href="#projects" class="bn632-hover bn26"><li>Proyectos</li></a>
             </ul>
         </nav>
+        <button class="hamburger hamburger--slider" type="button" id="nav-button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
     </header>
     <main>
-        <aside>
+        <div id="main-wrapper">
+          <aside>
             <img src="public/assets/images/pfp.jpg" alt="Foto de perfil" id="profile">
             <div id="pwrapper">
                 <h1>Pablo Cabello Ruz</h1>
@@ -38,43 +46,45 @@
                     <li><a href="https://www.linkedin.com/in/pablo-cabello-ruz" target="_blank"><img src="public/assets/images/LogoLinkedIn.png" alt="Visita mi página de LinkedIn" name="Visita mi página de LinkedIn" class="socialIcon"></a></li>
                 </ul>
             </footer>
-        </aside>
-        <article>
-            <section id="about-content">
-                <a class="anchor" id="about" name="target"></a>
-                <h3>¿Quién es Pablo?</h3>
-                <p>Pablo es un chaval bastante normal con un gusto muy pronunciado por 3 cosas: Comer, Entrenar y Programar. Mi primer acercamiento con la tecnología fue cuando tenía 1 año y medio cuando mi padre me puso un teclado y una pantalla delante y aporreaba las teclas fascinado simplemente por lo que ocurria en la pantalla al mismo tiempo (obviamente fascinado de que si pulsaba una tecla aparecía una letra). Poco más tarde a los 5 años mis padres me compraron la Wii, la cual fue mi primera consola y con la que empezé a entender que me encantaba ese mundillo y poco a poco fui adentrandome en todos o casi todos los campos de la informática. Con el tiempo fui aprendiendo más y más sobre la informática gracias a los videojuegos y a ganar interés por este mundo. Con 12 años empezé por aprender a programar con Scratch, ganando ese pensamiento crítico y resolutivo a muy temprana edad. Poco después di el salto y aprendí a manejar RPGMaker, con el que hacia pequeños juegos tipo RPG. No sería hasta entrados los 17 - 18 años cuando en el instituto empezé a programar en C. Con ese interés, una vez terminado el bachillerato decidí seguir la rama de la programación por el ciclo superior de desarrollo de aplicaciones web, en el que aprendí gran parte del conocimiento que practico a dia de hoy.</p>
-                <p>Hago ejercicio en el gimnasio, especificamente Powerlifting, y me encanta la automoción y los videojuegos.</p>
-                <p>Actualmente puedo trabajar en ambos lados del desarrollo ya que tengo esa versatilidad, pero mi lugar de comfort es el backend. Mi framework de preferencia es NodeJS, pero siempre estoy abierto a probar cosas nuevas.</p>
-            </section>
-            <section id="experience-content">
-                <a class="anchor" id="experience" name="target"></a>
-                <h3>Mis estudios</h3>
-                <h4>Septiembre de 2022 - Junio de 2024</h4>
-                <b><p>Grado superior en Desarrollo de aplicaciones web</p></b>
-                <p>Completé mi formación como desarrollador de aplicaciones web y me formé en las tecnologías básicas como HTML5, CSS3, Javascript, PHP, Python y otros lenguajes de alto nivel como C++ y Java</p>
-                <h4>1 de Octubre de 2024 - 31 de Octubre de 2024</h4>
-                <b><p>Curso completo de 150h de JSE</p></b>
-                <p>En el curso pude repasar todo mi conocimiento en Java y pude poner en práctica mi pensamiento crítico</p>
-                <h4>29 de Septiembre de 2025 - Actualidad</h4>
-                <b><p>Bootcamp de Ciberseguridad</p></b>
-                <p>En el bootcamp aprendo sobre pentesting, red hat y blue hat, ingeniería social, hacking ético y demás áreas de la seguridad informática</p>
-                <h3>Mi trayectoria profesional</h3>
-                <h4>24 de Octubre de 2023 - 27 de Octubre de 2023</h4>
-                <b><p>Participante en Andalucia Skills 2022-23</p></b>
-                <p>Fui participante en la modalidad de desarrollo web en el torneo a nivel autonómico</p>
-                <h4>2 de Abril de 2024 - 13 de Junio de 2024</h4>
-                <b><p>Becario en desarrollo de aplicaciones web para Logic Sistemas informáticos</p></b>
-                <p>Haciendo trabajos pequeños para el departamento de desarrollo web, comenzando proyectos con el framework Laravel. También arreglando fallos en las páginas de Wordpress del departamento de marketing</p>
-                <button class="bn632-hover bn26" onclick="downloadCV()">¡Descárgate mi curriculum!</button>
-            </section>
-            <section id="projects-content">
-                <a class="anchor" id="projects" name="target"></a>
-                <h3>Mis proyectos</h3>
-                <a href="https://github.com/makumba04/TimeShift-Arcade" target="_blank"><h4>Proyecto Timeshift Arcade - Desde Abril de 2024</h4></a>
-            </section>
-        </article>
-        <div class="background">
+          </aside>
+          <article>
+              <section id="about-content">
+                  <a class="anchor" id="about" name="target"></a>
+                  <h3>¿Quién es Pablo?</h3>
+                  <p>Pablo es un chaval bastante normal con un gusto muy pronunciado por 3 cosas: Comer, Entrenar y Programar. Mi primer acercamiento con la tecnología fue cuando tenía 1 año y medio cuando mi padre me puso un teclado y una pantalla delante y aporreaba las teclas fascinado simplemente por lo que ocurria en la pantalla al mismo tiempo (obviamente fascinado de que si pulsaba una tecla aparecía una letra). Poco más tarde a los 5 años mis padres me compraron la Wii, la cual fue mi primera consola y con la que empezé a entender que me encantaba ese mundillo y poco a poco fui adentrandome en todos o casi todos los campos de la informática. Con el tiempo fui aprendiendo más y más sobre la informática gracias a los videojuegos y a ganar interés por este mundo. Con 12 años empezé por aprender a programar con Scratch, ganando ese pensamiento crítico y resolutivo a muy temprana edad. Poco después di el salto y aprendí a manejar RPGMaker, con el que hacia pequeños juegos tipo RPG. No sería hasta entrados los 17 - 18 años cuando en el instituto empezé a programar en C. Con ese interés, una vez terminado el bachillerato decidí seguir la rama de la programación por el ciclo superior de desarrollo de aplicaciones web, en el que aprendí gran parte del conocimiento que practico a dia de hoy.</p>
+                  <p>Hago ejercicio en el gimnasio, especificamente Powerlifting, y me encanta la automoción y los videojuegos.</p>
+                  <p>Actualmente puedo trabajar en ambos lados del desarrollo ya que tengo esa versatilidad, pero mi lugar de comfort es el backend. Mi framework de preferencia es NodeJS, pero siempre estoy abierto a probar cosas nuevas.</p>
+              </section>
+              <section id="experience-content">
+                  <a class="anchor" id="experience" name="target"></a>
+                  <h3>Mis estudios</h3>
+                  <h4>Septiembre de 2022 - Junio de 2024</h4>
+                  <b><p>Grado superior en Desarrollo de aplicaciones web</p></b>
+                  <p>Completé mi formación como desarrollador de aplicaciones web y me formé en las tecnologías básicas como HTML5, CSS3, Javascript, PHP, Python y otros lenguajes de alto nivel como C++ y Java</p>
+                  <h4>1 de Octubre de 2024 - 31 de Octubre de 2024</h4>
+                  <b><p>Curso completo de 150h de JSE</p></b>
+                  <p>En el curso pude repasar todo mi conocimiento en Java y pude poner en práctica mi pensamiento crítico</p>
+                  <h4>29 de Septiembre de 2025 - Actualidad</h4>
+                  <b><p>Bootcamp de Ciberseguridad</p></b>
+                  <p>En el bootcamp aprendo sobre pentesting, red hat y blue hat, ingeniería social, hacking ético y demás áreas de la seguridad informática</p>
+                  <h3>Mi trayectoria profesional</h3>
+                  <h4>24 de Octubre de 2023 - 27 de Octubre de 2023</h4>
+                  <b><p>Participante en Andalucia Skills 2022-23</p></b>
+                  <p>Fui participante en la modalidad de desarrollo web en el torneo a nivel autonómico</p>
+                  <h4>2 de Abril de 2024 - 13 de Junio de 2024</h4>
+                  <b><p>Becario en desarrollo de aplicaciones web para Logic Sistemas informáticos</p></b>
+                  <p>Haciendo trabajos pequeños para el departamento de desarrollo web, comenzando proyectos con el framework Laravel. También arreglando fallos en las páginas de Wordpress del departamento de marketing</p>
+                  <button class="bn632-hover bn26" onclick="downloadCV()">¡Descárgate mi curriculum!</button>
+              </section>
+              <section id="projects-content">
+                  <a class="anchor" id="projects" name="target"></a>
+                  <h3>Mis proyectos</h3>
+                  <a href="https://github.com/makumba04/TimeShift-Arcade" target="_blank"><h4>Proyecto Timeshift Arcade - Desde Abril de 2024</h4></a>
+              </section>
+          </article>
+        </div>
+    </main>
+    <div class="background">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -146,6 +156,5 @@
               </g>
             </svg>
           </div>
-    </main>
 </body>
 </html>
